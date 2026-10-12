@@ -1,0 +1,37 @@
+aside {
+  height: 100%;
+  background: var(--panel);
+  padding: 22px 16px;
+  border-right: 1px solid #334155;
+}
+h2 {
+  margin: 0 0 14px 8px;
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--muted);
+}
+nav { display: flex; flex-direction: column; gap: 6px; }
+button {
+  all: unset;
+  cursor: pointer;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: var(--text);
+  transition: background .2s, transform .2s;
+}
+button:hover { background: var(--panel-2); transform: translateX(4px); }
+button.active {
+  background: linear-gradient(90deg, rgba(56,189,248,.25), transparent);
+  border-left: 3px solid var(--accent);
+}
+.icon { margin-right: 8px; }
+.tip {
+  margin-top: 24px;
+  padding: 12px;
+  font-size: .85rem;
+  line-height: 1.4;
+  border-radius: 10px;
+  background: rgba(251,191,36,.12);
+  border: 1px dashed var(--warn);
+}

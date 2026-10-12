@@ -1,0 +1,32 @@
+<main>
+  <section class="hero">
+    <h2>¡Hola, mundo desplegado! 👋</h2>
+    <p>Si estás viendo esta página, tu aplicación Angular está funcionando en el servidor.</p>
+  </section>
+
+  <h3>El viaje de tu código</h3>
+  <div class="pipeline">
+    @for (paso of pasos; track paso.titulo; let i = $index) {
+      <div class="step" [class.active]="pasoActivo() === i" [class.done]="pasoActivo() > i">
+        <span class="step-icon">{{ paso.icon }}</span>
+        <strong>{{ paso.titulo }}</strong>
+        <small>{{ paso.texto }}</small>
+      </div>
+    }
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <span class="label">Estado</span>
+      <span class="value ok">● Online</span>
+    </div>
+    <div class="card">
+      <span class="label">Hora del navegador</span>
+      <span class="value">{{ hora().toLocaleTimeString('es-ES') }}</span>
+    </div>
+    <div class="card clickable" (click)="sumar()">
+      <span class="label">Contador (haz clic)</span>
+      <span class="value">{{ visitas() }}</span>
+    </div>
+  </div>
+</main>

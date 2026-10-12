@@ -1,0 +1,21 @@
+.layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header"
+    "aside  main"
+    "footer footer";
+}
+.area-header { grid-area: header; }
+.area-aside  { grid-area: aside; }
+.area-main   { grid-area: main; }
+.area-footer { grid-area: footer; }
+
+@media (max-width: 760px) {
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "aside" "main" "footer";
+  }
+}

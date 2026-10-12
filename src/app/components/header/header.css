@@ -1,0 +1,26 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 28px;
+  background: linear-gradient(120deg, #0ea5e9, #8b5cf6 60%, #ec4899);
+  box-shadow: 0 4px 20px rgba(0,0,0,.35);
+}
+.brand { display: flex; align-items: center; gap: 14px; }
+.logo {
+  font-size: 2.2rem;
+  animation: float 3s ease-in-out infinite;
+}
+h1 { margin: 0; font-size: 1.5rem; }
+p  { margin: 2px 0 0; opacity: .85; font-size: .9rem; }
+.badge {
+  background: rgba(255,255,255,.2);
+  border: 1px solid rgba(255,255,255,.4);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(-10deg); }
+  50%      { transform: translateY(-6px) rotate(10deg); }
+}

@@ -1,0 +1,13 @@
+<aside>
+  <h2>Menú</h2>
+  <nav>
+    @for (item of items; track item.label; let i = $index) {
+      <button [class.active]="selected() === i" (click)="selected.set(i)">
+        <span class="icon">{{ item.icon }}</span> {{ item.label }}
+      </button>
+    }
+  </nav>
+  <div class="tip">
+    💡 <strong>Reto:</strong> añade una opción nueva al menú y despliega de nuevo.
+  </div>
+</aside>
